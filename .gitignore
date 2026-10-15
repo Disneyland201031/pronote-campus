@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Application</title>
+    <style>
+        /* --- LE STYLE DE VOTRE APPLICATION (CSS) --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #resultat {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- LE CONTENU DE VOTRE APPLICATION (HTML) --- -->
+    <div class="container">
+        <h1>Mon Application</h1>
+        <p>Cliquez sur le bouton pour tester l'application en ligne.</p>
+        <button id="monBouton">Cliquez ici</button>
+        <div id="resultat"></div>
+    </div>
+
+    <script>
+        // --- LE FONCTIONNEMENT DE VOTRE APPLICATION (JAVASCRIPT) ---
+        const bouton = document.getElementById('monBouton');
+        const resultat = document.getElementById('resultat');
+
+        bouton.addEventListener('click', () => {
+            resultat.textContent = "Bravo ! Votre application fonctionne parfaitement ! 🎉";
+        });
+    </script>
+
+</body>
+</html>
